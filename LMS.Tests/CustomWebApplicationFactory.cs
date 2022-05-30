@@ -27,7 +27,7 @@ namespace LMS.Tests
 
                 services.AddDbContext<ApplicationDbContext>(options =>
                 {
-                    options.UseInMemoryDatabase("Identity");
+                    options.UseSqlite("Data Source=data.db;");
                 });
 
                 //var sp = services.BuildServiceProvider();

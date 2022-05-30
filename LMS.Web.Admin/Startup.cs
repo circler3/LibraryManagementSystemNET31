@@ -32,10 +32,10 @@ namespace LMS.Web.Admin
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseInMemoryDatabase("LMSDB"));
+                options.UseSqlite("Data Source=data.db;"));
 
             services.AddDbContext<LibraryContext>(options =>
-                options.UseInMemoryDatabase("LMSDB"));
+                options.UseSqlite("Data Source=data.db;"));
 
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = false)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
@@ -62,6 +62,7 @@ namespace LMS.Web.Admin
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 

@@ -38,7 +38,7 @@ namespace LMS.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseInMemoryDatabase("LMSDB");
+            optionsBuilder.UseSqlite("Data Source=data.db;");
         }
     }
 }

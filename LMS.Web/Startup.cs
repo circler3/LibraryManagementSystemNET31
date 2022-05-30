@@ -28,7 +28,7 @@ namespace LMS.Web
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<LibraryContext>(options =>
-                options.UseInMemoryDatabase("LMSDB"));
+                options.UseSqlite("Data Source=data.db;Version=3;"));
 
             services.AddAutoMapper(typeof(Startup));
             

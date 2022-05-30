@@ -22,14 +22,18 @@ namespace LMS.Web.Admin.ViewModels
 
         [Required]
         [StringLength(150, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 5)]
+        [DisplayName("最长借阅天数")]
         public string Title { get; set; }
 
+        [DisplayName("最长借阅天数")]
         public string Description { get; set; }
 
         [Required]
+        [DisplayName("最长借阅天数")]
         public string Publisher { get; set; }
 
         [Required]
+        [DisplayName("最长借阅天数")]
         public string Language { get; set; }
 
         [Required]
