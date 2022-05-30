@@ -28,10 +28,10 @@ namespace LMS.Web
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<LibraryContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+                options.UseInMemoryDatabase("LMSDB"));
 
             services.AddAutoMapper(typeof(Startup));
-
+            
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 
             services.AddControllersWithViews().AddRazorRuntimeCompilation();

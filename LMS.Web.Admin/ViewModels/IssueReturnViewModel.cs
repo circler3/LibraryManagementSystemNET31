@@ -11,19 +11,19 @@ namespace LMS.Web.Admin.ViewModels
         public int MemberId { get; set; }
         public int BookId { get; set; }
 
-        [DisplayName("Book")]
+        [DisplayName("书名")]
         public string BookTitle { get; set; }
 
-        [DisplayName("Member Name")]
+        [DisplayName("读者姓名")]
         public string MemberName { get; set; }
 
-        [DisplayName("Member Phone")]
+        [DisplayName("读者电话")]
         public string MemberPhone { get; set; }
 
-        [DisplayName("Issued At")]
+        [DisplayName("借阅时间")]
         public DateTime IssueDate { get; set; }
 
-        [DisplayName("Expires At")]
+        [DisplayName("归还时间")]
         public DateTime ExpireDate { get; set; }
     }
 }

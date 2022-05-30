@@ -8,23 +8,23 @@ namespace LMS.Web.Admin.ViewModels
 {
     public class MemberViewModel
     {
-        [DisplayName("Id")]
+        [DisplayName("读者Id")]
         public int MemberId { get; set; }
 
         [Required]
-        [DisplayName("First Name")]
+        [DisplayName("名")]
         public string FirstName { get; set; }
 
         [Required]
-        [DisplayName("Last Name")]
+        [DisplayName("姓")]
         public string LastName { get; set; }
 
         [Required]
-        [DisplayName("Phone")]
+        [DisplayName("电话号码")]
         public string PhoneNumber { get; set; }
 
         [Required]
-        [DisplayName("Member Type")]
+        [DisplayName("读者类型")]
         public MemberType MemberType { get; set; }
 
         public ICollection<Issue> Issues { get; set; }

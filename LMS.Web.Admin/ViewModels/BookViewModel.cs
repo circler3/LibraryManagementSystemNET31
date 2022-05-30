@@ -17,7 +17,7 @@ namespace LMS.Web.Admin.ViewModels
             this.MaxIssueDays = 10;
         }
 
-        [DisplayName("Id")]
+        [DisplayName("书籍Id")]
         public int BookId { get; set; }
 
         [Required]
@@ -38,7 +38,7 @@ namespace LMS.Web.Admin.ViewModels
         [DisplayName("Call Number")]
         public string CallNumber { get; set; }
 
-        [DisplayName("Max Issue Days")]
+        [DisplayName("最长借阅天数")]
         public int MaxIssueDays { get; set; }
 
         public ICollection<Author> Authors { get; set; }

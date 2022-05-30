@@ -6,7 +6,7 @@ namespace LMS.Web.Admin.ViewModels
 {
     public class SubjectViewModel
     {
-        [DisplayName("Id")]
+        [DisplayName("主题Id")]
         public int SubjectId { get; set; }
 
         [Required]
